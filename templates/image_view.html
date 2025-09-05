@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ image.title }}</title>
+    <style>
+        body { font-family: sans-serif; padding:2rem; background:#f0f0f0; }
+        img { max-width:100%; height:auto; display:block; margin-bottom:1rem; border-radius:10px; }
+        a { text-decoration:none; color:#3498db; margin-bottom:1rem; display:inline-block; }
+        h1 { margin-bottom:1rem; }
+        p { margin-bottom:0.5rem; }
+    </style>
+</head>
+<body>
+    <a href="index.html">← Back to Gallery</a>
+    <h1>{{ image.title }}</h1>
+    <img src="static/{{ image.path }}" alt="{{ image.title }}">
+    {% if image.description %}
+    <p>{{ image.description }}</p>
+    {% endif %}
+
+    {% if image.tags %}
+    <p><strong>Tags:</strong> {{ image.tags | join(', ') }}</p>
+    {% endif %}
+    {% if image.date_taken %}<p><strong>Date Taken:</strong> {{ image.date_taken }}</p>{% endif %}
+    {% if image.camera %}<p><strong>Camera:</strong> {{ image.camera }}</p>{% endif %}
+    {% if image.location %}<p><strong>Location:</strong> {{ image.location }}</p>{% endif %}
+</body>
+</html>
