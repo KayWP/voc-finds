@@ -1,18 +1,12 @@
 {
-  "landscape1.jpeg": {
-    "title": "Mountain Sunrise",
-    "description": "A breathtaking sunrise over the mountain peaks, captured during our hiking trip.",
-    "tags": ["landscape", "mountains", "sunrise", "nature"],
-    "date_taken": "2024-06-15",
-    "camera": "Canon EOS R6",
-    "location": "Swiss Alps, Switzerland"
-  },
-  "portrait1.jpeg": {
-    "title": "Street Portrait",
-    "description": "A candid portrait captured during a street photography session in the old town.",
-    "tags": ["portrait", "street photography", "black and white"],
-    "date_taken": "2024-05-22",
-    "camera": "Sony A7III",
-    "location": "Prague, Czech Republic"
-  }
+    "NL-HaNA_1.04.21_1409_09-klein.jpeg": {
+        "title": "Drawing of passers",
+        "description": "A drawing of 'passers'",
+        "tags": "drawing",
+        "location": "Japan",
+        "archive": "1.04.21",
+        "inventory number": 1409,
+        "scan": 9,
+        "finder": "unknown"
+    }
 }
