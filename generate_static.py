@@ -2,6 +2,8 @@ import os
 import json
 import pandas as pd
 from jinja2 import Environment, FileSystemLoader
+import shutil
+from collections import defaultdict
 
 #------------------------------
 # Update Image metadata
@@ -24,7 +26,7 @@ def convert():
             if pd.isna(v):
                 item[k] = None
             elif k == 'tags' and v is not None:
-                # Convert tags string to list (split by comma and strip whitespace)
+                # Convert tags string to list (split by semicolon and strip whitespace)
                 item[k] = [tag.strip() for tag in str(v).split(';') if tag.strip()]
 
         result[key] = item
@@ -43,6 +45,7 @@ OUTPUT_DIR = "build"
 STATIC_DIR = "static"
 IMAGES_DIR = os.path.join(STATIC_DIR, "images")
 METADATA_FILE = "image_metadata.json"
+TAGS_DIR = os.path.join(OUTPUT_DIR, "tags")
 
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 
@@ -65,7 +68,6 @@ def get_images_with_metadata():
     for filename in os.listdir(IMAGES_DIR):
         if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp')):
             tags = metadata.get(filename, {}).get("tags", [])
-            #tags = tags_value.split(";") if isinstance(tags_value, str) else tags_value
 
             inv_number_str = metadata.get(filename, {}).get("inventory_number", "")
             inventory_number = int(inv_number_str) if inv_number_str.isdigit() else None
@@ -89,36 +91,85 @@ def get_images_with_metadata():
     images.sort(key=lambda x: x['title'].lower())
     return images
 
+def get_images_by_tag(images):
+    """Group images by their tags"""
+    tag_images = defaultdict(list)
+    all_tags = set()
+    
+    for image in images:
+        for tag in image['tags']:
+            tag_images[tag].append(image)
+            all_tags.add(tag)
+    
+    # Sort images within each tag by title
+    for tag in tag_images:
+        tag_images[tag].sort(key=lambda x: x['title'].lower())
+    
+    return dict(tag_images), sorted(all_tags)
+
+def create_tag_slug(tag):
+    """Convert tag to URL-friendly slug"""
+    return tag.lower().replace(' ', '-').replace('_', '-')
+
 # -----------------------------
 # Prepare output directories
 # -----------------------------
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
+if not os.path.exists(TAGS_DIR):
+    os.makedirs(TAGS_DIR)
+
 # Copy static folder
-import shutil
 shutil.copytree(STATIC_DIR, os.path.join(OUTPUT_DIR, "static"), dirs_exist_ok=True)
 
 # -----------------------------
-# Render gallery.html
+# Get images and organize by tags
 # -----------------------------
 images = get_images_with_metadata()
+tag_images, all_tags = get_images_by_tag(images)
+
+# -----------------------------
+# Render main gallery.html (all images)
+# -----------------------------
 template = env.get_template("gallery.html")
-gallery_html = template.render(images=images)
+gallery_html = template.render(images=images, all_tags=all_tags)
 
 with open(os.path.join(OUTPUT_DIR, "index.html"), "w", encoding="utf-8") as f:
     f.write(gallery_html)
 
 # -----------------------------
+# Render tag galleries
+# -----------------------------
+for tag in all_tags:
+    tag_slug = create_tag_slug(tag)
+    tag_dir = os.path.join(TAGS_DIR, tag_slug)
+    
+    if not os.path.exists(tag_dir):
+        os.makedirs(tag_dir)
+    
+    # Render tag gallery page
+    tag_gallery_html = template.render(
+        images=tag_images[tag], 
+        current_tag=tag,
+        all_tags=all_tags
+    )
+    
+    with open(os.path.join(tag_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(tag_gallery_html)
+
+# -----------------------------
 # Render individual image_view.html pages
 # -----------------------------
-template = env.get_template("image_view.html")
+image_template = env.get_template("image_view.html")
 
 for image in images:
     # use filename without extension for clean URLs
     page_name = image['filename'].rsplit('.', 1)[0] + ".html"
-    html_content = template.render(image=image)
+    html_content = image_template.render(image=image, all_tags=all_tags)
     with open(os.path.join(OUTPUT_DIR, page_name), "w", encoding="utf-8") as f:
         f.write(html_content)
 
-print("Static site generated in 'build/' folder.")
+print(f"Static site generated in 'build/' folder.")
+print(f"Generated {len(all_tags)} tag galleries: {', '.join(all_tags)}")
+print(f"Tag gallery files: {', '.join([f'index_{create_tag_slug(tag)}.html' for tag in all_tags])}")

@@ -60,7 +60,11 @@
                     {% if image.tags %}
                     <div class="info-item">
                         <strong>Document Type</strong>
-                        <span class="tags">{{ image.tags }}</span>
+                            {% for tag in image.tags %}
+                            <a href="index_{{ tag.lower().replace(' ', '_').replace('-', '_') }}.html" class="tag-link">
+                                <span class="tag">{{ tag }}</span>
+                            </a>
+                            {% endfor %}
                     </div>
                     {% endif %}
                     
