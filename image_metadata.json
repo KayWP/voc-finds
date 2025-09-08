@@ -1,12 +1,62 @@
 {
     "NL-HaNA_1.04.21_1409_09-klein.jpeg": {
         "title": "Drawing of passers",
-        "description": "A drawing of 'passers'",
+        "description/why is this fun": "A drawing of 'passers'",
         "tags": "drawing",
         "location": "Japan",
         "archive": "1.04.21",
         "inventory number": 1409,
         "scan": 9,
         "finder": "unknown"
+    },
+    "NL-HaNA_1.04.02_1366_0739.jpg": {
+        "title": "Map of a coastline",
+        "description/why is this fun": "This appears to be a map of a coastline including the depths in various spots!",
+        "tags": "map",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 1366,
+        "scan": 739,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_1366_0871.jpg": {
+        "title": "Map of a coastline",
+        "description/why is this fun": "This appears to be a map of a coastline including the depths in various spots!",
+        "tags": "map",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 1366,
+        "scan": 871,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_8203_0102.jpg": {
+        "title": "Map of the 'Bantimoerongse gebergte'",
+        "description/why is this fun": "This map shows the 'Bantimoerongse' mountains, including a 'place where many Europeans are buried'",
+        "tags": "map",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 8203,
+        "scan": 102,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_8203_0103.jpg": {
+        "title": "Half of a 'Bantimoerongse gebergte'-map",
+        "description/why is this fun": "This map seems to overlap, and be an addition to, the map of the 'Bantimoerongse gebergte'.",
+        "tags": "map",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 8203,
+        "scan": 103,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_9812_0369.jpg": {
+        "title": "Half obscured map",
+        "description/why is this fun": "This map of buildings next to the water seems to be half-obscured. Potentially part of the map can be folded out.",
+        "tags": "map",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 9812,
+        "scan": 369,
+        "finder": null
     }
 }
