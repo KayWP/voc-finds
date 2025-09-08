@@ -1,62 +1,302 @@
 {
     "NL-HaNA_1.04.21_1409_09-klein.jpeg": {
         "title": "Drawing of passers",
-        "description/why is this fun": "A drawing of 'passers'",
+        "description": "A drawing of 'passers'",
         "tags": "drawing",
         "location": "Japan",
         "archive": "1.04.21",
-        "inventory number": 1409,
-        "scan": 9,
+        "inventory number": 1409.0,
+        "scan": 9.0,
         "finder": "unknown"
+    },
+    "NL-HaNA_1.04.02_1053_0532.jpg": {
+        "title": "Pentests and inksmears",
+        "description": null,
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 1053.0,
+        "scan": 532.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_1084_0244.jpg": {
+        "title": "A blanked out image",
+        "description": "While this page originally had a drawing, it seems someone has pasted a blank piece of paper over it! Wonder what might be underneath…",
+        "tags": "drawing; behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 1084.0,
+        "scan": 244.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_1241_1181.jpg": {
+        "title": "Scraps of paper",
+        "description": "Someone has pasted various scraps of paper onto this page.",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 1241.0,
+        "scan": 1181.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_2675_0857.jpg": {
+        "title": "Long squigly line instead of text",
+        "description": null,
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 2675.0,
+        "scan": 857.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_3021_0008.jpg": {
+        "title": "A bookmark",
+        "description": "This scan contains what appears to be a finding aid, helping the reader go directly to the amboina section of the material",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 3021.0,
+        "scan": 8.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_3341_0559.jpg": {
+        "title": "A Giant letter R",
+        "description": "It seems this scribe has had fun filling the entire page with a single letter.",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 3341.0,
+        "scan": 559.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_3509_0268.jpg": {
+        "title": "A Giant letter W",
+        "description": "It seems this scribe has had fun filling the entire page with a single letter.",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 3509.0,
+        "scan": 268.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_3341_0564.jpg": {
+        "title": "A giant letter O",
+        "description": "It seems this scribe has had fun filling the entire page with a single letter.",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 3341.0,
+        "scan": 564.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_3819_0816.jpg": {
+        "title": "Drawings of coins",
+        "description": "It seems someone has drawn VOC-coins on this page.",
+        "tags": "drawing; physical objects",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 3819.0,
+        "scan": 816.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_4445_1073.jpg": {
+        "title": "Empty alphabetical ledger.",
+        "description": "This appears to be an empty document used to order things alphabetically.",
+        "tags": "behind-the-scenes; unique-document",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 4445.0,
+        "scan": 1073.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_7943_0314.jpg": {
+        "title": "A bunch of squigles",
+        "description": "Someone has gone wild drawing squigles on this page.",
+        "tags": "drawing; behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 7943.0,
+        "scan": 314.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_8040_0175.jpg": {
+        "title": "Hand-lettered document introduction",
+        "description": "The scribe has taken some extra time hand-lettering this page.",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 8040.0,
+        "scan": 175.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_9344_0578.jpg": {
+        "title": "Pasted-in-letter",
+        "description": "It seems this was a letter, folded in four parts, before it ended up in the archives.",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 9344.0,
+        "scan": 578.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_9345_0356.jpg": {
+        "title": "Pasted-in-letter",
+        "description": "It seems this was a letter, folded in four parts, before it ended up in the archives.",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 9345.0,
+        "scan": 356.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_9346_0384.jpg": {
+        "title": "Pasted-in-letter with a drawing",
+        "description": "It seems this was a letter, folded in four parts, before it ended up in the archives. It also includes a drawing. What creature could it be?",
+        "tags": "behind-the-scenes; drawing",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 9346.0,
+        "scan": 384.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_9364_0356.jpg": {
+        "title": "Doodles",
+        "description": "Is it a signature? Is it a drawing? What animal could it be?",
+        "tags": "drawing",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 9364.0,
+        "scan": 356.0,
+        "finder": null
     },
     "NL-HaNA_1.04.02_1366_0739.jpg": {
         "title": "Map of a coastline",
-        "description/why is this fun": "This appears to be a map of a coastline including the depths in various spots!",
+        "description": "This appears to be a map of a coastline including the depths in various spots!",
         "tags": "map",
         "location": null,
         "archive": "1.04.02",
-        "inventory number": 1366,
-        "scan": 739,
+        "inventory number": 1366.0,
+        "scan": 739.0,
         "finder": null
     },
     "NL-HaNA_1.04.02_1366_0871.jpg": {
         "title": "Map of a coastline",
-        "description/why is this fun": "This appears to be a map of a coastline including the depths in various spots!",
+        "description": "This appears to be a map of a coastline including the depths in various spots!",
         "tags": "map",
         "location": null,
         "archive": "1.04.02",
-        "inventory number": 1366,
-        "scan": 871,
+        "inventory number": 1366.0,
+        "scan": 871.0,
         "finder": null
     },
     "NL-HaNA_1.04.02_8203_0102.jpg": {
         "title": "Map of the 'Bantimoerongse gebergte'",
-        "description/why is this fun": "This map shows the 'Bantimoerongse' mountains, including a 'place where many Europeans are buried'",
+        "description": "This map shows the 'Bantimoerongse' mountains, including a 'place where many Europeans are buried'",
         "tags": "map",
         "location": null,
         "archive": "1.04.02",
-        "inventory number": 8203,
-        "scan": 102,
+        "inventory number": 8203.0,
+        "scan": 102.0,
         "finder": null
     },
     "NL-HaNA_1.04.02_8203_0103.jpg": {
         "title": "Half of a 'Bantimoerongse gebergte'-map",
-        "description/why is this fun": "This map seems to overlap, and be an addition to, the map of the 'Bantimoerongse gebergte'.",
+        "description": "This map seems to overlap, and be an addition to, the map of the 'Bantimoerongse gebergte'.",
         "tags": "map",
         "location": null,
         "archive": "1.04.02",
-        "inventory number": 8203,
-        "scan": 103,
+        "inventory number": 8203.0,
+        "scan": 103.0,
         "finder": null
     },
     "NL-HaNA_1.04.02_9812_0369.jpg": {
         "title": "Half obscured map",
-        "description/why is this fun": "This map of buildings next to the water seems to be half-obscured. Potentially part of the map can be folded out.",
+        "description": "This map of buildings next to the water seems to be half-obscured. Potentially part of the map can be folded out.",
         "tags": "map",
         "location": null,
         "archive": "1.04.02",
-        "inventory number": 9812,
-        "scan": 369,
+        "inventory number": 9812.0,
+        "scan": 369.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_9335_0082.jpg": {
+        "title": "Blue paper",
+        "description": "This page, and the papers following it, seems to be made of a different type of paper than the usual, having a special blue hue.",
+        "tags": "behind-the-scenes; physical objects",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 9335.0,
+        "scan": 82.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_2682_0267.jpg": {
+        "title": "A round robin",
+        "description": "This scan has a 'round robin' on it, a petition signed by sailors in a circle to prevent identification of the ringleader during protests or mutinies against abusive captains.",
+        "tags": "unique-document",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 2682.0,
+        "scan": 267.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_3988_0930.jpg": {
+        "title": "A list full of symbols",
+        "description": "This document seems to have intriguing symbols on it, potentially used to link different parts of the text together. The next scan holds even more symbols!",
+        "tags": "behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 3988.0,
+        "scan": 930.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_1121_0897.jpg": {
+        "title": "A petition",
+        "description": "This document was signed by many different individuals and appears to have been a petition! The list of signees continues on the next page.",
+        "tags": "unique-document",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 1121.0,
+        "scan": 897.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_9391_0720.jpg": {
+        "title": "A star of david",
+        "description": "This page has a star of david on it. Is it a doodle, or does it serve a purpose? A similar star appears on NL-HaNA_1.04.02_9391_0860.",
+        "tags": "drawing; behind-the-scenes",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 9391.0,
+        "scan": 720.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_3967_0600.jpg": {
+        "title": "Overview of symbols embossed on cannons",
+        "description": "This table, and the tables following it, hold details on cannons, including the symbols engraved into them and the name of the makers!",
+        "tags": "drawing; unique document",
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 3967.0,
+        "scan": 600.0,
+        "finder": null
+    },
+    "NL-HaNA_1.04.02_0000_0000.jpg": {
+        "title": null,
+        "description": null,
+        "tags": null,
+        "location": null,
+        "archive": "1.04.02",
+        "inventory number": 0.0,
+        "scan": 0.0,
+        "finder": null
+    },
+    "NaN": {
+        "title": null,
+        "description": null,
+        "tags": null,
+        "location": null,
+        "archive": null,
+        "inventory number": null,
+        "scan": null,
         "finder": null
     }
 }

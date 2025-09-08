@@ -22,8 +22,8 @@
     {% if image.tags %}
     <p><strong>Tags:</strong> {{ image.tags | join(', ') }}</p>
     {% endif %}
-    {% if image.date_taken %}<p><strong>Date Taken:</strong> {{ image.date_taken }}</p>{% endif %}
-    {% if image.camera %}<p><strong>Camera:</strong> {{ image.camera }}</p>{% endif %}
+    {% if image.title %}<p><strong>{{ image.title }}</strong> </p>{% endif %}
+    {% if image.in %}<p><strong>Camera:</strong> {{ image.camera }}</p>{% endif %}
     {% if image.location %}<p><strong>Location:</strong> {{ image.location }}</p>{% endif %}
 </body>
 </html>
