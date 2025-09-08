@@ -18,10 +18,15 @@ def convert():
     result = {}
     for item in data:
         key = item.pop('image')  # Use 'image' column as key
-        # Replace NaN with None
+        
+        # Replace NaN with None and convert tags to list
         for k, v in item.items():
             if pd.isna(v):
                 item[k] = None
+            elif k == 'tags' and v is not None:
+                # Convert tags string to list (split by comma and strip whitespace)
+                item[k] = [tag.strip() for tag in str(v).split(';') if tag.strip()]
+
         result[key] = item
     
     # Write to JSON file
@@ -59,15 +64,25 @@ def get_images_with_metadata():
 
     for filename in os.listdir(IMAGES_DIR):
         if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp')):
+            tags = metadata.get(filename, {}).get("tags", [])
+            #tags = tags_value.split(";") if isinstance(tags_value, str) else tags_value
+
+            inv_number_str = metadata.get(filename, {}).get("inventory_number", "")
+            inventory_number = int(inv_number_str) if inv_number_str.isdigit() else None
+
+            scan_str = str(metadata.get(filename, {}).get("scan", ""))
+            scan = int(scan_str) if scan_str.isdigit() else None
+
             image_info = {
                 "filename": filename,
                 "path": f"images/{filename}",
                 "title": metadata.get(filename, {}).get("title", filename.rsplit('.', 1)[0]),
                 "description": metadata.get(filename, {}).get("description", ""),
-                "tags": metadata.get(filename, {}).get("tags", []),
-                "date_taken": metadata.get(filename, {}).get("date_taken", ""),
-                "camera": metadata.get(filename, {}).get("camera", ""),
-                "location": metadata.get(filename, {}).get("location", "")
+                "tags": tags,
+                "archive": metadata.get(filename, {}).get("archive", ""),
+                "inventory_number": inventory_number,
+                "scan": scan,
+                "finder": metadata.get(filename, {}).get("finder", "")
             }
             images.append(image_info)
 

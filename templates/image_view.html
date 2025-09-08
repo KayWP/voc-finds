@@ -3,27 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ image.title }}</title>
-    <style>
-        body { font-family: sans-serif; padding:2rem; background:#f0f0f0; }
-        img { max-width:100%; height:auto; display:block; margin-bottom:1rem; border-radius:10px; }
-        a { text-decoration:none; color:#3498db; margin-bottom:1rem; display:inline-block; }
-        h1 { margin-bottom:1rem; }
-        p { margin-bottom:0.5rem; }
-    </style>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <a href="index.html">← Back to Gallery</a>
-    <h1>{{ image.title }}</h1>
-    <img src="static/{{ image.path }}" alt="{{ image.title }}">
-    {% if image.description %}
-    <p>{{ image.description }}</p>
-    {% endif %}
-
-    {% if image.tags %}
-    <p><strong>Tags:</strong> {{ image.tags | join(', ') }}</p>
-    {% endif %}
-    {% if image.title %}<p><strong>{{ image.title }}</strong> </p>{% endif %}
-    {% if image.in %}<p><strong>Camera:</strong> {{ image.camera }}</p>{% endif %}
-    {% if image.location %}<p><strong>Location:</strong> {{ image.location }}</p>{% endif %}
+    <div class="container">
+        <a href="index.html" class="back-link">Back to Gallery</a>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1>{{ image.title }}</h1>
+            </div>
+            
+            <div class="content-grid">
+                <div class="image-section">
+                    <div class="image-container">
+                        <img src="static/{{ image.path }}" alt="{{ image.title }}">
+                    </div>
+                    
+                    <div class="description-box">
+                        <h3>Why This Is Fascinating</h3>
+                        <p>{{ image.description }}</p>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h2>Archive Details</h2>
+                    
+                    {% if image.archive %}
+                    <div class="info-item">
+                        <strong>Archive Collection</strong>
+                        <span>{{ image.archive }}</span>
+                    </div>
+                    {% endif %}
+                   
+                    {% if image.inventory_number %}
+                    <div class="info-item">
+                        <strong>Inventory Number</strong>
+                        <span>{{ image.inventory_number }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if image.scan %}
+                    <div class="info-item">
+                        <strong>Scan Number</strong>
+                        <span>{{ image.scan }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if image.finder %}
+                    <div class="info-item">
+                        <strong>Found By</strong>
+                        <span>{{ image.finder }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if image.tags %}
+                    <div class="info-item">
+                        <strong>Document Type</strong>
+                        <span class="tags">{{ image.tags }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="info-item">
+                        <strong>Location</strong>
+                        <span>{% if image.location %}{{ image.location }}{% else %}Not specified{% endif %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
