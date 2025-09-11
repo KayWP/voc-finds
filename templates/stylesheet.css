@@ -12,16 +12,6 @@
             color: #2c3e50;
         }
         
-                .tag-link {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .tag-link:hover .tag {
-            /* hover effects on the tag when link is hovered */
-            transform: scale(1.05);
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -186,7 +176,17 @@
             line-height: 1.8;
         }
         
-               
+        .tags {
+            background: #e8f4f8;
+            border: 1px solid #b8e6f0;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            color: #2980b9;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+        
         @media (max-width: 768px) {
             .content-grid {
                 grid-template-columns: 1fr;
@@ -202,3 +202,38 @@
                 padding: 1rem;
             }
         }
+
+
+        /* Minimal Outlined Tags CSS */
+.tag-minimal {
+    display: inline-block;
+    background: transparent;
+    color: #2c3e50;
+    padding: 4px 10px;
+    margin: 2px;
+    border: 1px solid #2c3e50;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tag-minimal:hover {
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+}
+
+.tag-minimal:visited,
+.tag-minimal:active,
+.tag-minimal:focus {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.tag-minimal:hover:visited,
+.tag-minimal:hover:active,
+.tag-minimal:hover:focus {
+    color: white;
+}

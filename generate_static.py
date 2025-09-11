@@ -132,7 +132,7 @@ tag_images, all_tags = get_images_by_tag(images)
 template = env.get_template("gallery.html")
 gallery_html = template.render(images=images, all_tags=all_tags)
 
-with open(os.path.join(OUTPUT_DIR, "index.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(OUTPUT_DIR, "gallery.html"), "w", encoding="utf-8") as f:
     f.write(gallery_html)
 
 # -----------------------------

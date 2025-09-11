@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Finds - Homepage</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            min-height: 100vh; 
+            color: #333; 
+        }
+        
+        .header { 
+            text-align:center; 
+            padding:3rem 1rem 2rem; 
+            background: rgba(255,255,255,0.1); 
+            backdrop-filter: blur(10px); 
+            margin-bottom:3rem; 
+        }
+        
+        .header h1 { 
+            color:white; 
+            font-size:3rem; 
+            font-weight:300; 
+            text-shadow:0 2px 10px rgba(0,0,0,0.3); 
+            margin-bottom: 1rem;
+        }
+        
+        .intro { 
+            color: rgba(255,255,255,0.9); 
+            font-size: 1.2rem; 
+            line-height: 1.6; 
+            max-width: 600px; 
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .main-container { 
+            max-width:1200px; 
+            margin:0 auto; 
+            padding:0 1rem; 
+        }
+        
+        .categories-section h2 {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .categories-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 1.5rem; 
+            margin-bottom: 3rem;
+        }
+        
+        .category-card { 
+            background: white; 
+            border-radius: 20px; 
+            padding: 2rem; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+            transition: all 0.3s ease; 
+            text-decoration: none; 
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .category-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .category-title { 
+            font-size: 1.4rem; 
+            font-weight: 600; 
+            color: #2c3e50; 
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .category-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .category-description { 
+            color: #7f8c8d; 
+            font-size: 1rem; 
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .category-count {
+            background: #e8f4fd;
+            color: #2980b9;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        .view-all-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .view-all-card:hover {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .view-all-card .category-title {
+            color: white;
+            font-size: 1.6rem;
+        }
+        
+        .view-all-card .category-description {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        @media (max-width:768px) { 
+            .categories-grid { 
+                grid-template-columns: 1fr; 
+                gap: 1rem; 
+            } 
+            .header h1 { 
+                font-size: 2.5rem; 
+            }
+            .intro {
+                font-size: 1.1rem;
+            }
+            .category-card { 
+                padding: 1.5rem; 
+            } 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Fun Finds</h1>
+        <p class="intro">
+            Discover and explore our curated collection of interesting images, documents, and media. 
+            Browse by category to find exactly what you're looking for, or dive into our complete gallery 
+            to see everything we have to offer.
+        </p>
+    </div>
+    
+    <div class="main-container">
+        <div class="categories-section">
+            <h2>Browse Categories</h2>
+            <div class="categories-grid">
+                
+                <a href="index_documents.html" class="category-card">
+                    <h3 class="category-title">
+                        <span class="category-icon">📄</span>
+                        Documents
+                    </h3>
+                    <p class="category-description">
+                        Important papers, reports, forms, and official documents. Everything you need for reference and record-keeping.
+                    </p>
+                    <span class="category-count">24 items</span>
+                </a>
+                
+                <a href="index_photos.html" class="category-card">
+                    <h3 class="category-title">
+                        <span class="category-icon">📸</span>
+                        Photos
+                    </h3>
+                    <p class="category-description">
+                        Personal photographs, memorable moments, and visual memories captured over time.
+                    </p>
+                    <span class="category-count">156 items</span>
+                </a>
+                
+                <a href="index_receipts.html" class="category-card">
+                    <h3 class="category-title">
+                        <span class="category-icon">🧾</span>
+                        Receipts
+                    </h3>
+                    <p class="category-description">
+                        Purchase receipts, invoices, and financial records for expense tracking and tax purposes.
+                    </p>
+                    <span class="category-count">89 items</span>
+                </a>
+                
+                <a href="index_artwork.html" class="category-card">
+                    <h3 class="category-title">
+                        <span class="category-icon">🎨</span>
+                        Artwork
+                    </h3>
+                    <p class="category-description">
+                        Creative pieces, illustrations, designs, and artistic expressions from various sources.
+                    </p>
+                    <span class="category-count">42 items</span>
+                </a>
+                
+                <a href="index_screenshots.html" class="category-card">
+                    <h3 class="category-title">
+                        <span class="category-icon">🖥️</span>
+                        Screenshots
+                    </h3>
+                    <p class="category-description">
+                        Screen captures, UI elements, software interfaces, and digital references.
+                    </p>
+                    <span class="category-count">73 items</span>
+                </a>
+                
+                <a href="index_memes.html" class="category-card">
+                    <h3 class="category-title">
+                        <span class="category-icon">😄</span>
+                        Memes
+                    </h3>
+                    <p class="category-description">
+                        Funny images, internet culture, and humorous content that brings a smile to your day.
+                    </p>
+                    <span class="category-count">127 items</span>
+                </a>
+                
+                <a href="gallery.html" class="category-card view-all-card">
+                    <h3 class="category-title">
+                        View All Items
+                    </h3>
+                    <p class="category-description">
+                        Browse the complete collection of all images and documents in one place.
+                    </p>
+                    <span class="category-count" style="background: rgba(255,255,255,0.2); color: white;">511 total items</span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
