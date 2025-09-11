@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>Fun Finds Gallery</title>
     <style>
         /* Your existing styles */
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -25,6 +25,40 @@
         .metadata-label { font-weight:600; min-width:60px; }
         .tags { display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.5rem; }
         .tag { background:#e8f4fd; color:#2980b9; padding:0.2rem 0.6rem; border-radius:15px; font-size:0.7rem; font-weight:500; }
+        /* Updated minimal tag styling */
+        .tag {
+            display: inline-block;
+            background: transparent;
+            color: #2c3e50;
+            padding: 4px 10px;
+            margin: 2px;
+            border: 1px solid #2c3e50;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tag:hover {
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+        }
+
+        .tag:visited,
+        .tag:active,
+        .tag:focus {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .tag:hover:visited,
+        .tag:hover:active,
+        .tag:hover:focus {
+            color: white;
+        }
+        
         .no-images { text-align:center; color:white; font-size:1.2rem; margin:3rem 0; padding:2rem; background: rgba(255,255,255,0.1); border-radius:15px; backdrop-filter: blur(10px); }
         @media (max-width:768px) { .gallery { grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1rem; } .header h1 { font-size:2rem; } .image-info { padding:1rem; } }
     </style>

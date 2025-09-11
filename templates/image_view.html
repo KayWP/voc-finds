@@ -21,7 +21,7 @@
                     </div>
                     
                     <div class="description-box">
-                        <h3>Why This Is Fascinating</h3>
+                        <h3>Why this is such a Fun Find</h3>
                         <p>{{ image.description }}</p>
                     </div>
                 </div>
@@ -60,11 +60,9 @@
                     {% if image.tags %}
                     <div class="info-item">
                         <strong>Document Type</strong>
-                            {% for tag in image.tags %}
-                            <a href="index_{{ tag.lower().replace(' ', '_').replace('-', '_') }}.html" class="tag-link">
-                                <span class="tag">{{ tag }}</span>
-                            </a>
-                            {% endfor %}
+                        {% for tag in image.tags %}
+                        <a href="index_{{ tag.lower().replace(' ', '_').replace('-', '_') }}.html" class="tag-minimal">{{ tag }}</a>
+                        {% endfor %}
                     </div>
                     {% endif %}
                     
