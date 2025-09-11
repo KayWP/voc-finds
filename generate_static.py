@@ -117,9 +117,6 @@ def create_tag_slug(tag):
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
-if not os.path.exists(TAGS_DIR):
-    os.makedirs(TAGS_DIR)
-
 # Copy static folder
 shutil.copytree(STATIC_DIR, os.path.join(OUTPUT_DIR, "static"), dirs_exist_ok=True)
 
@@ -143,10 +140,6 @@ with open(os.path.join(OUTPUT_DIR, "index.html"), "w", encoding="utf-8") as f:
 # -----------------------------
 for tag in all_tags:
     tag_slug = create_tag_slug(tag)
-    tag_dir = os.path.join(TAGS_DIR, tag_slug)
-    
-    if not os.path.exists(tag_dir):
-        os.makedirs(tag_dir)
     
     # Render tag gallery page
     tag_gallery_html = template.render(
@@ -155,7 +148,7 @@ for tag in all_tags:
         all_tags=all_tags
     )
     
-    with open(os.path.join(tag_dir, "index.html"), "w", encoding="utf-8") as f:
+    with open(os.path.join(OUTPUT_DIR, f"index_{tag}.html"), "w", encoding="utf-8") as f:
         f.write(tag_gallery_html)
 
 # -----------------------------
