@@ -22,11 +22,9 @@
                     <div class="image-info">
                         <h3 class="image-title">{{ image.title }}</h3>                       
                         {% if image.tags %}
-                        <div class="tags">
                             {% for tag in image.tags %}
                             <span class="tag">{{ tag }}</span>
                             {% endfor %}
-                        </div>
                         {% endif %}
                     </div>
                 </div>
