@@ -212,8 +212,7 @@
         "title": "Map of a coastline",
         "description": "This appears to be a map of a coastline including the depths in various spots!",
         "tags": [
-            "map",
-            "test"
+            "map"
         ],
         "location": null,
         "archive": "1.04.02",
